@@ -40,9 +40,9 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'ObjectMapper'
-  s.dependency 'FBSDKCoreKit’
-  s.dependency 'FBSDKShareKit’
-  s.dependency 'FBSDKLoginKit’
+  s.dependency 'FBSDKCoreKit'
+  s.dependency 'FBSDKShareKit'
+  s.dependency 'FBSDKLoginKit'
   s.dependency 'Google/SignIn'
   # s.dependency 'AFNetworking', '~> 2.3'
   # s.dependency 'AFNetworking', '~> 2.3'
