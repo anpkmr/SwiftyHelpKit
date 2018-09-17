@@ -163,7 +163,7 @@
 			path = SocialManager;
 			sourceTree = "<group>";
 		};
-		6E38EA47214FC5A300FD06B2 /* CSUtility */ = {
+		6E38EA47214FC5A300FD06B2 /* AppUtility */ = {
 			isa = PBXGroup;
 			children = (
 				6E38EA4E214FC5DD00FD06B2 /* AppShared.swift */,
@@ -173,7 +173,7 @@
 				6E38EA4A214FC5DD00FD06B2 /* LocationManager.swift */,
 				6E38EA4D214FC5DD00FD06B2 /* UserDefaults.swift */,
 			);
-			path = CSUtility;
+			path = AppUtility;
 			sourceTree = "<group>";
 		};
 		6E38EA48214FC5A700FD06B2 /* Messages */ = {
@@ -188,7 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				6E38EA48214FC5A700FD06B2 /* Messages */,
-				6E38EA47214FC5A300FD06B2 /* CSUtility */,
+				6E38EA47214FC5A300FD06B2 /* AppUtility */,
 				6E38EA46214FC59C00FD06B2 /* SocialManager */,
 				6E38EA45214FC59200FD06B2 /* AppConstants */,
 				920868B6ED08253B3E98E8DF81D9A715 /* ReplaceMe.swift */,
