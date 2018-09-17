@@ -1,0 +1,6 @@
+framework module SwiftyHelpKit {
+  umbrella header "SwiftyHelpKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

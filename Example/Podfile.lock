@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyHelpKit (0.1.0)
+
+DEPENDENCIES:
+  - SwiftyHelpKit (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftyHelpKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SwiftyHelpKit: 251fe83b51fd11410628b4dd0be535b9f726103b
+
+PODFILE CHECKSUM: 39e76918baedfaad2a697db59e57b4a5457fc762
+
+COCOAPODS: 1.5.3

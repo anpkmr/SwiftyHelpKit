@@ -1,0 +1,22 @@
+{
+  "name": "SwiftyHelpKit",
+  "version": "0.1.0",
+  "summary": "A short description of SwiftyHelpKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/anpkmr/SwiftyHelpKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "anpkmr": "anup227kumar@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/anpkmr/SwiftyHelpKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "SwiftyHelpKit/Classes/**/*"
+}
