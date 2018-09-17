@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftyHelpKit_Example' do
+  pod 'SwiftyHelpKit', :path => '../'
+
+  target 'SwiftyHelpKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
