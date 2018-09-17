@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHelpKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'SwiftyHelpKit will allow you to add some startup code in your app that you initally need'
   s.swift_version = '4.0'
 
@@ -40,6 +40,10 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.frameworks = 'UIKit'
   s.dependency 'ObjectMapper'
+  s.dependency 'FBSDKCoreKit’
+  s.dependency 'FBSDKShareKit’
+  s.dependency 'FBSDKLoginKit’
+  s.dependency 'Google/SignIn'
   # s.dependency 'AFNetworking', '~> 2.3'
   # s.dependency 'AFNetworking', '~> 2.3'
   # s.dependency 'AFNetworking', '~> 2.3'
