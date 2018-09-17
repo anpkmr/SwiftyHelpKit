@@ -61,7 +61,6 @@
 		6E38EA4B214FC5DD00FD06B2 /* GenericFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericFunctions.swift; sourceTree = "<group>"; };
 		6E38EA4C214FC5DD00FD06B2 /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 		6E38EA4D214FC5DD00FD06B2 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
-		6E38EA4E214FC5DD00FD06B2 /* AppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		6E38EA4F214FC5DD00FD06B2 /* LocationfetchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationfetchTimer.swift; sourceTree = "<group>"; };
 		6E38EA50214FC5EC00FD06B2 /* SocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialUser.swift; sourceTree = "<group>"; };
 		6E38EA51214FC5EC00FD06B2 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		6E38EA53214FC60700FD06B2 /* CSConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSConstants.swift; sourceTree = "<group>"; };
 		6E38EA54214FC60700FD06B2 /* SegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifiers.swift; sourceTree = "<group>"; };
 		6E38EA55214FC60700FD06B2 /* CSEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSEnums.swift; sourceTree = "<group>"; };
+		6E38EA75214FD25500FD06B2 /* AppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
 		7FDD58B481298F068AD2842F51DD083B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83375D0BCB438E9ACF513EC0DB618FAE /* Pods-SwiftyHelpKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyHelpKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		85A53D485A70152B7175F966E55169BB /* Pods-SwiftyHelpKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyHelpKit_Tests.modulemap"; sourceTree = "<group>"; };
@@ -166,7 +166,6 @@
 		6E38EA47214FC5A300FD06B2 /* AppUtility */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EA4E214FC5DD00FD06B2 /* AppShared.swift */,
 				6E38EA4C214FC5DD00FD06B2 /* DateFormatters.swift */,
 				6E38EA4B214FC5DD00FD06B2 /* GenericFunctions.swift */,
 				6E38EA4F214FC5DD00FD06B2 /* LocationfetchTimer.swift */,
@@ -184,9 +183,19 @@
 			path = Messages;
 			sourceTree = "<group>";
 		};
+		6E38EA74214FD22B00FD06B2 /* SHKUtility */ = {
+			isa = PBXGroup;
+			children = (
+				6E38EA75214FD25500FD06B2 /* AppShared.swift */,
+			);
+			name = SHKUtility;
+			path = SwiftyHelpKit/Classes/SHKUtility;
+			sourceTree = "<group>";
+		};
 		75226EA3A0FCE67E0E73D563DAFBA2B4 /* SwiftyHelpKit */ = {
 			isa = PBXGroup;
 			children = (
+				6E38EA74214FD22B00FD06B2 /* SHKUtility */,
 				6E38EA48214FC5A700FD06B2 /* Messages */,
 				6E38EA47214FC5A300FD06B2 /* AppUtility */,
 				6E38EA46214FC59C00FD06B2 /* SocialManager */,
