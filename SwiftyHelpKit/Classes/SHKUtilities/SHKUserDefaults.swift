@@ -1,7 +1,4 @@
-//
-//  CSUserDefaults.swift
-//  Caldersafe
-//
+
 //  Created by anoop on 8/7/18.
 //  Copyright © 2018 ios. All rights reserved.
 //
@@ -11,9 +8,9 @@ import ObjectMapper
 
 
 
-class CSUserDefaults : NSObject{
+class SHKUserDefaults : NSObject{
     
-    static let sharedDefault = CSUserDefaults()//Singletion object
+    static let sharedDefault = SHKUserDefaults()//Singletion object
     let defaults = UserDefaults.standard//userDefault object
     
 
@@ -43,37 +40,11 @@ class CSUserDefaults : NSObject{
         return nil
     }
     
-    /// save user pin to userDefaults
-    ///
-    /// - Parameters:
-    ///   - loginPin: pin
-    ///   - forType: supervisor/operator
-    func savePin(loginPin:String,forType:String){
-        defaults.set(loginPin, forKey: forType)
-        defaults.synchronize()
-    }
-    func getPin(forType:String)->String?{
-         return defaults.value(forKey:forType) as? String
-    }
-    func saveModule(name:String){
-        defaults.set(name, forKey: kUDModuleKey)
-        defaults.synchronize()
-    }
-    func getModule()->String? {
-        return defaults.value(forKey:kUDModuleKey) as? String
-    }
-    func removeModule() {
-        defaults.removeObject(forKey: kUDModuleKey)
-        defaults.synchronize()
-    }
-    
     
     /// remove user info from defaults
     func removeSavedUser(){
         defaults.removeObject(forKey:kUDUserInfoKey)
-        defaults.removeObject(forKey:kUDfirstTimeLoginKey)
         defaults.removeObject(forKey:"loginPin")
-        defaults.removeObject(forKey:kUDModuleKey)
         defaults.synchronize()
     }
     

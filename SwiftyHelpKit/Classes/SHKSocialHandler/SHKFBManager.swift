@@ -1,9 +1,9 @@
 //
 //  FacebookManager.swift
-//  SwiftHelper
+//  SwiftyHelpKit
 //
-//  Created by SwiftHelper on 8/28/18.
-//  Copyright © 2018 SwiftHelper. All rights reserved.
+//  Created by SwiftyHelpKit on 8/28/18.
+//  Copyright © 2018 SwiftyHelpKit. All rights reserved.
 //
 
 import Foundation
@@ -13,7 +13,7 @@ import FBSDKCoreKit
 import ObjectMapper
 
 
-class SHKFBManager: NSObject {
+public class SHKFBManager: NSObject {
     var loginVC : FBSDKLoginManager? = nil
     private static var sharedFB: SHKFBManager = {
         let sharedFacebook = SHKFBManager()
@@ -23,23 +23,23 @@ class SHKFBManager: NSObject {
     /// shared method
     ///
     /// - Returns: self object
-    class func  sharedFBService() -> SHKFBManager {
+   public class func  sharedFBService() -> SHKFBManager {
         return sharedFB
     }
     /// Check if a valid access token is available or not..
     ///
     /// - Returns: true/false
-    func isConnectedToFB() -> Bool {
+    public func isConnectedToFB() -> SHKValidation {
         if FBSDKAccessToken.current() != nil &&  hasGrantedPermission() == true{
-            return true
+            return SHKValidation.Valid
         }
-        return false
+        return SHKValidation.Invalid(kFacebookSessionExpired)
     }
     
     /// check if we have the all granted permission in our app like public_profile, email, user_friends
     ///
     /// - Returns: true/false
-    func hasGrantedPermission()-> Bool{
+    public func hasGrantedPermission()-> Bool {
         if     FBSDKAccessToken.current().hasGranted("public_profile") &&  FBSDKAccessToken.current().hasGranted("email") &&  FBSDKAccessToken.current().hasGranted("user_friends"){
             return true
         }
@@ -51,7 +51,7 @@ class SHKFBManager: NSObject {
     /// - Parameters:
     ///   - presentOnVC: ViewController on which you wan to present the facebook login screen
     ///   - completion: if login is successfull or not comletion block
-    func  loginTofacebook(presentOnVC:UIViewController!,completion:@escaping ((Bool,Error?)->Void))  {
+   public func  loginTofacebook(presentOnVC:UIViewController!,completion:@escaping ((Bool,Error?)->Void))  {
         if loginVC == nil {
             loginVC = FBSDKLoginManager()
         }
@@ -72,8 +72,7 @@ class SHKFBManager: NSObject {
     /// Fetch user data if user is logged in or access token is available.
     ///
     /// - Parameter fbUserDetailCompletion: comletion bloc that will return the user details
-    func fetchUseData(fbUserDetailCompletion:@escaping (SocialUser?,Error?)->Void){
-        
+    public func fetchUseData(fbUserDetailCompletion:@escaping (SocialUser?,Error?)->Void){
             let graphRequest : FBSDKGraphRequest = FBSDKGraphRequest(graphPath: "me", parameters: ["fields":"email,name,first_name,last_name,gender,picture.type(large)"])
             graphRequest.start(completionHandler: { (connection, result, error) -> Void in
                 if ((error) == nil) {
@@ -82,7 +81,7 @@ class SHKFBManager: NSObject {
                             let user : SocialUser? = Mapper<SocialUser>().map(JSON: fbResult )
                             fbUserDetailCompletion(user, nil)
                         }else {
-                            fbUserDetailCompletion(nil, NSError.init(domain: Bundle.main.bundleIdentifier!, code: 400, userInfo: ["msg":"Email Not found"]))
+                            fbUserDetailCompletion(nil, NSError.init(domain: kAppBundleId, code: 400, userInfo: ["msg":"Email Not found"]))
                         }
                     }
                 }
@@ -94,7 +93,7 @@ class SHKFBManager: NSObject {
     }
     
     /// log out from facebook
-    func facebookLogOut()->Void{
+    public func facebookLogOut()->Void{
         if loginVC != nil{
             loginVC?.logOut()
         }

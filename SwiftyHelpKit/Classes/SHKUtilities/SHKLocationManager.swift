@@ -1,37 +1,38 @@
 //
-//  CSLocationManager.swift
-//  SwiftHelper
+//  SHKLocationManager.swift
+//  SwiftyHelpKit
 //
-//  Created by SwiftHelper on 8/9/18.
-//  Copyright © 2018 SwiftHelper. All rights reserved.
+//  Created by SwiftyHelpKit on 8/9/18.
+//  Copyright © 2018 SwiftyHelpKit. All rights reserved.
 //
 
 import Foundation
 import CoreLocation
 
-typealias locationCompletion =  (_ userLatitude:Double,_ userLongtitude:Double,_ fullLocation:CLLocation) -> Void
+public typealias locationCompletion =  (_ userLatitude:Double,_ userLongtitude:Double,_ fullLocation:CLLocation) -> Void
 
-class CSLocationManager: NSObject,CLLocationManagerDelegate {
-    static  var csCLLocation =  CLLocationManager()
+public class SHKLocationManager: NSObject,CLLocationManagerDelegate {
+    static var shkCLLocationObject =  CLLocationManager()
     static var  onLocationCom : locationCompletion? = nil
-    
-    private static var sharedLocationObject: CSLocationManager = {
-        let locationObject = CSLocationManager()
-        csCLLocation.delegate = locationObject
-        csCLLocation.desiredAccuracy=kCLLocationAccuracyHundredMeters
-        csCLLocation.distanceFilter = 200
+
+    private static var sharedLocationObject: SHKLocationManager = {
+        let locationObject = SHKLocationManager()
+        shkCLLocationObject.delegate = locationObject
+        shkCLLocationObject.desiredAccuracy=kCLLocationAccuracyHundredMeters
+        shkCLLocationObject.distanceFilter = 200
 //        csCLLocation.allowsBackgroundLocationUpdates = true
-        csCLLocation.startUpdatingLocation()
+        shkCLLocationObject.startUpdatingLocation()
 //        csCLLocation.startMonitoringSignificantLocationChanges()
         return locationObject
     }()
-    class func sharedLocation() -> CSLocationManager {
+    
+    public class func sharedLocation() -> SHKLocationManager {
         return sharedLocationObject
     }
-    func checkForAuthorization(completion:(_  isAuth:Bool)->Void) -> Void{
+    public func checkForAuthorization(completion:(_  isAuth:Bool)->Void) -> Void{
         switch( CLLocationManager.authorizationStatus() ){
         case .notDetermined:
-            CSLocationManager.csCLLocation.requestAlwaysAuthorization()
+            SHKLocationManager.shkCLLocationObject.requestAlwaysAuthorization()
             completion(true)
             break
         case .authorizedAlways , .authorizedWhenInUse:
@@ -44,27 +45,26 @@ class CSLocationManager: NSObject,CLLocationManagerDelegate {
         }
     }
     
-    func startLocationTrack (completion:@escaping locationCompletion)->Void{
-        CSLocationManager.onLocationCom = completion
+    public func startLocationTrack (completion:@escaping locationCompletion)->Void{
+        SHKLocationManager.onLocationCom = completion
         startLocationUpdate()
     }
-    func startLocationUpdate(){
-        CSLocationManager.csCLLocation.startUpdatingLocation()
+   public func startLocationUpdate(){
+        SHKLocationManager.shkCLLocationObject.startUpdatingLocation()
 //        LocationManager.csCLLocation.startMonitoringSignificantLocationChanges()
     }
-    func stopLocationTrack() {
-        CSLocationManager.csCLLocation.stopUpdatingLocation()
+    public func stopLocationTrack() {
+        SHKLocationManager.shkCLLocationObject.stopUpdatingLocation()
 //        LocationManager.csCLLocation.stopMonitoringSignificantLocationChanges()
     }
     //MARK: location delegate
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+    public func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locationArray = locations as NSArray
         let locationObj = locationArray.firstObject as! CLLocation
         let coord = locationObj.coordinate
-//         CSUserDefaults.sharedDefault.saveUserLocationDetails(location: locationObj)
          stopLocationTrack()
-        if CSLocationManager.onLocationCom != nil {
-            CSLocationManager.onLocationCom!(coord.latitude,coord.longitude,locationObj)
+        if SHKLocationManager.onLocationCom != nil {
+            SHKLocationManager.onLocationCom!(coord.latitude,coord.longitude,locationObj)
         }
     }
     

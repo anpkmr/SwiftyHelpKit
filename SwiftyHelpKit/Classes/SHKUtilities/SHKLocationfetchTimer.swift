@@ -1,29 +1,29 @@
 //
-//  CSLocationfetchTimer.swift
-//  SwiftHelper
+//  SHKLocationfetchTimer.swift
+//  SwiftyHelpKit
 //
-//  Created by SwiftHelper on 8/9/18.
-//  Copyright © 2018 SwiftHelper. All rights reserved.
+//  Created by SwiftyHelpKit on 8/9/18.
+//  Copyright © 2018 SwiftyHelpKit. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class CSLocationTimer {
+public class SHKLocationTimer {
     
-    static let sharedTimer = CSLocationTimer()
+    static let sharedTimer = SHKLocationTimer()
     var timer:Timer?
     
     /// start the time
     ///
     /// - Parameter interval: interval time //currently defined in constants
     func startTimerWithInterval(interval:TimeInterval){
-      timer =  Timer.scheduledTimer(timeInterval: interval, target: CSLocationTimer.sharedTimer, selector: #selector(fetchLocation), userInfo: nil, repeats: true)
+      timer =  Timer.scheduledTimer(timeInterval: interval, target: SHKLocationTimer.sharedTimer, selector: #selector(fetchLocation), userInfo: nil, repeats: true)
     }
     
-    /// fetch user location from CSlocation manager class
+    /// fetch user location from SHKlocation manager class
     @objc func fetchLocation(){
-    CSLocationManager.sharedLocation().startLocationUpdate()
+    SHKLocationManager.sharedLocation().startLocationUpdate()
     }
     
     

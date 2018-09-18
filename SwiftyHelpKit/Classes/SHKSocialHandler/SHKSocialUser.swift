@@ -1,29 +1,29 @@
 //
 //  UserResponse.swift
-//  SwiftHelper
+//  SwiftyHelpKit
 //
-//  Created by SwiftHelper on 8/28/18.
-//  Copyright © 2018 SwiftHelper. All rights reserved.
+//  Created by SwiftyHelpKit on 8/28/18.
+//  Copyright © 2018 SwiftyHelpKit. All rights reserved.
 //
 
 import Foundation
 import ObjectMapper
 
-class SocialUser: Mappable {
+public class SocialUser: Mappable {
     
     var firstName:String = ""
     var lastName:String = ""
     var gender:String = ""
 
-    required init?(map: Map) {
+    required public init?(map: Map) {
     }
     
     //empty constructor
-    init() {
+    public init() {
         
     }
     
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         firstName <- map["first_name"]
         lastName <- map["last_name"]
         gender <- map["gender"]

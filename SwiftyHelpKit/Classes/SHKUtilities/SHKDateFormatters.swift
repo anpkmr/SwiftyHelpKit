@@ -1,9 +1,6 @@
-//
-//  CSDateFormatters.swift
-//  SwiftHelper
-//
-//  Created by SwiftHelper on 8/16/18.
-//  Copyright © 2018 SwiftHelper. All rights reserved.
+
+//  Created by SwiftyHelpKit on 8/16/18.
+//  Copyright © 2018 SwiftyHelpKit. All rights reserved.
 //
 
 import Foundation
@@ -23,7 +20,7 @@ let kDate_GMT_FORMAT = "yyyy'-'MM'-'dd'T'HH':'mm':'ss'Z'"
 let kDate_WALLET_DATE_FORMATE = "MMMM d, y"
 let kDateForNotificationScreen  = "h:mm aa, MMMM d"
 
-class CSDateConvertor: NSObject {
+class SHKDateConvertor: NSObject {
     
     ///get the string from date.
     ///returns :- String of date
