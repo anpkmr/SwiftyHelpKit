@@ -9,14 +9,14 @@
         <dict>
             <key>CFBundleURLSchemes</key>
             <array>
-                <string>fb1756444061294297</string>
+                <string>fbYOUR_APP_ID</string>
             </array>
         </dict>
     </array>
     <key>FacebookAppID</key>
-    <string>1756444061294297</string>
+    <string>YOUR_APP_ID</string>
     <key>FacebookDisplayName</key>
-    <string>LetsTestApp</string>
+    <string>TestApp</string>
     
     
     <key>LSApplicationQueriesSchemes</key>

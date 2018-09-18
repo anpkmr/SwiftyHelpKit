@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import SwiftyHelperKit
-
+import SwiftyHelpKit
 
 class ViewController: UIViewController {
     
@@ -30,11 +29,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fetchTopMovies(_ sender:UIButton) {
-        shkRequestHandler.sharedService().getRequest(requestUrl: URL(string:"https://itunes.apple.com/us/rss/topmovies/limit=25/json")!, requestParam: nil) { (response, error) in
+        ShkRequestHandler.sharedService.getRequest(requestUrl: URL(string:"https://itunes.apple.com/us/rss/topmovies/limit=25/json")!, requestParam: nil) { (response, error) in
             if error == nil {
-                print("Response in my controller class is ===\(response)")
+                print("Response in my controller class is ===\(String(describing: response))")
             } else {
-                print("Error in request is ===\(error?.localizedDescription)")
+                print("Error in request is ===\(String(describing: error?.localizedDescription))")
             }
         }
     }
