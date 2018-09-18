@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyHelpKit.svg?style=flat)](https://cocoapods.org/pods/SwiftyHelpKit)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyHelpKit.svg?style=flat)](https://cocoapods.org/pods/SwiftyHelpKit)
 
-## Example
+## How to install 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
@@ -19,6 +19,10 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SwiftyHelpKit'
 ```
+
+## Basic configuration
+1) Add facebook App Id to your project.
+2) Add Url schemes
 
 ## Author
 
