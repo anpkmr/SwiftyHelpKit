@@ -13,16 +13,17 @@ import UIKit
 import  GoogleSignIn
 import ObjectMapper
 
+typealias  socialuserDetailComletion = (_ userDetail:SocialUser?,_ err:Error?)->Void
 
-class GooglePlusManager: NSObject,GIDSignInDelegate,GIDSignInUIDelegate {
+class SHKGooglePlusManager: NSObject,GIDSignInDelegate,GIDSignInUIDelegate {
     //MARK:- varible Declaration
     var googleUserCompletionhandler:socialuserDetailComletion? = nil
     //    var googleLoggedUserObserver  = Observable.create(λ)
     private var onViewController:UIViewController?
     
     //MARK:- Shared instance created
-    static var sharedGoogleClient: GooglePlusManager = {
-        let sharedGoogleObject = GooglePlusManager()
+    static var sharedGoogleClient: SHKGooglePlusManager = {
+        let sharedGoogleObject = SHKGooglePlusManager()
         GIDSignIn.sharedInstance().delegate = sharedGoogleObject
         GIDSignIn.sharedInstance().uiDelegate = sharedGoogleObject
         return sharedGoogleObject
@@ -54,7 +55,7 @@ class GooglePlusManager: NSObject,GIDSignInDelegate,GIDSignInUIDelegate {
     
     //MARK:- Other methods
     
-    ///Create user dicationary to post on server
+    ///Create user dictionary to post on server
     ///
     /// - Parameters:
     ///   - user: user Object i.e GIDGoogleUser

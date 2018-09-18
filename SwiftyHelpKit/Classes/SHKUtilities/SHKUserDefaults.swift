@@ -8,7 +8,6 @@
 
 import Foundation
 import ObjectMapper
-import CoreLocation
 
 
 
@@ -21,7 +20,7 @@ class CSUserDefaults : NSObject{
     /// save userInfo
     ///
     /// - Parameter info: userObject
-    func saveUserInfo(info:User?) {
+    func saveUserInfo(info:SocialUser?) {
         guard info == nil else {
             let JSONString = Mapper().toJSONString(info!, prettyPrint: true)
             defaults.set(JSONString, forKey: kUDUserInfoKey)
@@ -33,12 +32,12 @@ class CSUserDefaults : NSObject{
     /// get UserInfo
     ///
     /// - Returns: userObject
-    func getSaveUserInfo() -> User? {
+    func getSaveUserInfo() -> SocialUser? {
         let   userSecretObject =   defaults.value(forKey: kUDUserInfoKey) as? String
         guard userSecretObject == nil
             else {
-                var user = User()
-                user = Mapper<User>().map(JSONString: userSecretObject!)!
+                var user = SocialUser()
+                user = Mapper<SocialUser>().map(JSONString: userSecretObject!)!
                 return user
         }
         return nil
@@ -67,13 +66,7 @@ class CSUserDefaults : NSObject{
         defaults.removeObject(forKey: kUDModuleKey)
         defaults.synchronize()
     }
-    func saveUserLocationDetails(location:CLLocation){
-        defaults.removeObject(forKey: kUDLocationKey)
-        defaults.synchronize()
-    }
-    func getUserLocationDetails()->CLLocation? {
-       return defaults.value(forKey: kUDLocationKey) as? CLLocation
-    }
+    
     
     /// remove user info from defaults
     func removeSavedUser(){

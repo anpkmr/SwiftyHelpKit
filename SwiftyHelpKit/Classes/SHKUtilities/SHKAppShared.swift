@@ -11,7 +11,7 @@ import Foundation
 
 class AppShared: NSObject {
    static let shared = AppShared()//Singletion instance of the app
-    var user: User? //user Object
+    var user: SocialUser? //user Object
     var isNotificationEnaled:Bool = false
     var isConnectedToInternet:Bool = true
 }

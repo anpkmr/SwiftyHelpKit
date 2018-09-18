@@ -28,8 +28,8 @@ Pod::Spec.new do |s|
   s.author           = { 'anpkmr' => 'anup227kumar@gmail.com' }
   s.source           = { :git => 'https://github.com/anpkmr/SwiftyHelpKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-    s.ios.deployment_target = '9.0'
+  s.requires_arc = true
+  s.ios.deployment_target = '9.0'
   s.static_framework = true
   s.source_files = 'SwiftyHelpKit/Classes/**/*'
   
@@ -38,11 +38,13 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit','GGLCore','GGLSignIn'
+  s.pod_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
+  s.frameworks = 'UIKit','StoreKit'
   s.dependency 'ObjectMapper'
-  #s.dependency 'FBSDKCoreKit', '~> 4.4'
-  #s.dependency 'FBSDKShareKit', '~> 4.4'
-  #s.dependency 'FBSDKLoginKit', '~> 4.4'
-  #s.dependency 'Google/SignIn'
+  s.dependency 'Alamofire'
+  s.dependency 'FBSDKLoginKit', '4.34.0'
+  s.dependency 'FBSDKCoreKit', '4.34.0'
+  s.dependency 'FBSDKShareKit', '4.34.0'
+  s.dependency 'Google/SignIn'
   #s.dependency 'GTMOAuth2', '~>1.1.6'
   end

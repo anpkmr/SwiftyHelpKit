@@ -7,22 +7,23 @@
 //
 
 import Foundation
+import UIKit
 import FBSDKLoginKit
 import FBSDKCoreKit
 import ObjectMapper
-import UIkit
 
-class FBManager: NSObject {
+
+class SHKFBManager: NSObject {
     var loginVC : FBSDKLoginManager? = nil
-    private static var sharedFB: FBManager = {
-        let sharedFacebook = FBManager()
+    private static var sharedFB: SHKFBManager = {
+        let sharedFacebook = SHKFBManager()
         return sharedFacebook
     }()
     
     /// shared method
     ///
     /// - Returns: self object
-    class func  sharedFBService() -> FBManager {
+    class func  sharedFBService() -> SHKFBManager {
         return sharedFB
     }
     /// Check if a valid access token is available or not..
@@ -81,7 +82,7 @@ class FBManager: NSObject {
                             let user : SocialUser? = Mapper<SocialUser>().map(JSON: fbResult )
                             fbUserDetailCompletion(user, nil)
                         }else {
-                            fbUserDetailCompletion(nil, NSError.init(domain: Bundle.main.identifier!, code: 400, userInfo: ["msg":"Email Not found"]))
+                            fbUserDetailCompletion(nil, NSError.init(domain: Bundle.main.bundleIdentifier!, code: 400, userInfo: ["msg":"Email Not found"]))
                         }
                     }
                 }

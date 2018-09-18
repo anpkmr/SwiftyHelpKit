@@ -12,6 +12,19 @@
 		3CBF4FFE3A13D998FCF257B681764F37 /* Pods-SwiftyHelpKit_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D35A18A5021C8FC967AF8002A867AE83 /* Pods-SwiftyHelpKit_Tests-dummy.m */; };
 		5D1360829A4FE8635E4E542F07F37841 /* Pods-SwiftyHelpKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19407E2A0044D2F0F566A260F63EC99D /* Pods-SwiftyHelpKit_Example-dummy.m */; };
 		60E84EF9961002DD9B8D74DD55155BC0 /* Pods-SwiftyHelpKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 83375D0BCB438E9ACF513EC0DB618FAE /* Pods-SwiftyHelpKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E1232A22150EECA00E45C23 /* SHKConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E12329F2150EEC600E45C23 /* SHKConstants.swift */; };
+		6E1232A32150EECA00E45C23 /* SHKEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A02150EEC600E45C23 /* SHKEnums.swift */; };
+		6E1232A42150EECA00E45C23 /* SHKSegueIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A12150EEC600E45C23 /* SHKSegueIdentifiers.swift */; };
+		6E1232A62150EEE000E45C23 /* SHKAppMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A52150EEDE00E45C23 /* SHKAppMessages.swift */; };
+		6E1232AA2150EEF200E45C23 /* SHKFBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A82150EEEE00E45C23 /* SHKFBManager.swift */; };
+		6E1232AB2150EEF200E45C23 /* SHKGooglePlusManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A72150EEEE00E45C23 /* SHKGooglePlusManager.swift */; };
+		6E1232AC2150EEF200E45C23 /* SHKSocialUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232A92150EEEE00E45C23 /* SHKSocialUser.swift */; };
+		6E1232B32150EF0500E45C23 /* SHKAppShared.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232AF2150EF0000E45C23 /* SHKAppShared.swift */; };
+		6E1232B42150EF0500E45C23 /* SHKDateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232AE2150EF0000E45C23 /* SHKDateFormatters.swift */; };
+		6E1232B52150EF0500E45C23 /* SHKGenericFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232B02150EF0000E45C23 /* SHKGenericFunctions.swift */; };
+		6E1232B62150EF0500E45C23 /* SHKLocationfetchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232B22150EF0000E45C23 /* SHKLocationfetchTimer.swift */; };
+		6E1232B72150EF0500E45C23 /* SHKLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232AD2150EF0000E45C23 /* SHKLocationManager.swift */; };
+		6E1232B82150EF0500E45C23 /* SHKUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232B12150EF0000E45C23 /* SHKUserDefaults.swift */; };
 		9DB6928ADF1DA9CFBC951998B80926C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B575D21378CD7F6B2D2D86FA6C838C1B /* Pods-SwiftyHelpKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DD83E53EC76F8B86CD005FF5C9D9A9 /* Pods-SwiftyHelpKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C780CB83FCEFB330F150A0324C6EB75D /* SwiftyHelpKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E6349EEC0CF50C7E2FA2069B370AB6 /* SwiftyHelpKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -55,17 +68,20 @@
 		61FD7F41E7360336E29E3B6A03452FC4 /* SwiftyHelpKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyHelpKit-prefix.pch"; sourceTree = "<group>"; };
 		641E836FF408353D73A48BB71BC5F0B8 /* Pods-SwiftyHelpKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SwiftyHelpKit_Example-resources.sh"; sourceTree = "<group>"; };
 		6BC3E17AA6FF7B5D7884E4A76A6C3D9C /* Pods-SwiftyHelpKit_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SwiftyHelpKit_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		6E38EA75214FD25500FD06B2 /* AppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppShared.swift; sourceTree = "<group>"; };
-		6E38EAB2214FE7AE00FD06B2 /* SHKConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKConstants.swift; sourceTree = "<group>"; };
-		6E38EAB3214FE7AE00FD06B2 /* SHKEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKEnums.swift; sourceTree = "<group>"; };
-		6E38EAB4214FE7AE00FD06B2 /* SHKSegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKSegueIdentifiers.swift; sourceTree = "<group>"; };
-		6E38EABB214FE81300FD06B2 /* SHKGooglePlusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKGooglePlusManager.swift; sourceTree = "<group>"; };
-		6E38EABC214FE81300FD06B2 /* SHKFBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKFBManager.swift; sourceTree = "<group>"; };
-		6E38EABD214FE81300FD06B2 /* SHKSocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKSocialUser.swift; sourceTree = "<group>"; };
-		6E38EABE214FE81B00FD06B2 /* SHKAppMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKAppMessages.swift; sourceTree = "<group>"; };
-		6E38EABF214FE82B00FD06B2 /* SHKConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKConstants.swift; sourceTree = "<group>"; };
-		6E38EAC0214FE82B00FD06B2 /* SHKEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKEnums.swift; sourceTree = "<group>"; };
-		6E38EAC1214FE82B00FD06B2 /* SHKSegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKSegueIdentifiers.swift; sourceTree = "<group>"; };
+		6E12329A2150EE6600E45C23 /* .gitkeep */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		6E12329F2150EEC600E45C23 /* SHKConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKConstants.swift; sourceTree = "<group>"; };
+		6E1232A02150EEC600E45C23 /* SHKEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKEnums.swift; sourceTree = "<group>"; };
+		6E1232A12150EEC600E45C23 /* SHKSegueIdentifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKSegueIdentifiers.swift; sourceTree = "<group>"; };
+		6E1232A52150EEDE00E45C23 /* SHKAppMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKAppMessages.swift; sourceTree = "<group>"; };
+		6E1232A72150EEEE00E45C23 /* SHKGooglePlusManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKGooglePlusManager.swift; sourceTree = "<group>"; };
+		6E1232A82150EEEE00E45C23 /* SHKFBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKFBManager.swift; sourceTree = "<group>"; };
+		6E1232A92150EEEE00E45C23 /* SHKSocialUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKSocialUser.swift; sourceTree = "<group>"; };
+		6E1232AD2150EF0000E45C23 /* SHKLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKLocationManager.swift; sourceTree = "<group>"; };
+		6E1232AE2150EF0000E45C23 /* SHKDateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKDateFormatters.swift; sourceTree = "<group>"; };
+		6E1232AF2150EF0000E45C23 /* SHKAppShared.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKAppShared.swift; sourceTree = "<group>"; };
+		6E1232B02150EF0000E45C23 /* SHKGenericFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKGenericFunctions.swift; sourceTree = "<group>"; };
+		6E1232B12150EF0000E45C23 /* SHKUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKUserDefaults.swift; sourceTree = "<group>"; };
+		6E1232B22150EF0000E45C23 /* SHKLocationfetchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKLocationfetchTimer.swift; sourceTree = "<group>"; };
 		7FDD58B481298F068AD2842F51DD083B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83375D0BCB438E9ACF513EC0DB618FAE /* Pods-SwiftyHelpKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyHelpKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		85A53D485A70152B7175F966E55169BB /* Pods-SwiftyHelpKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyHelpKit_Tests.modulemap"; sourceTree = "<group>"; };
@@ -139,53 +155,64 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6E38EA45214FC59200FD06B2 /* SHKAppConstants */ = {
+		6E1232992150EE6600E45C23 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EAB2214FE7AE00FD06B2 /* SHKConstants.swift */,
-				6E38EAB3214FE7AE00FD06B2 /* SHKEnums.swift */,
-				6E38EAB4214FE7AE00FD06B2 /* SHKSegueIdentifiers.swift */,
+				6E12329A2150EE6600E45C23 /* .gitkeep */,
+				6E12329B2150EE6600E45C23 /* SHKConstants */,
+				6E12329C2150EE6600E45C23 /* SHKMessages */,
+				6E12329D2150EE6600E45C23 /* SHKSocialHandler */,
+				6E12329E2150EE6600E45C23 /* SHKUtilities */,
 			);
-			path = SHKAppConstants;
+			name = Classes;
+			path = SwiftyHelpKit/Classes;
 			sourceTree = "<group>";
 		};
-		6E38EA46214FC59C00FD06B2 /* SHKSocialManager */ = {
+		6E12329B2150EE6600E45C23 /* SHKConstants */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EABC214FE81300FD06B2 /* SHKFBManager.swift */,
-				6E38EABB214FE81300FD06B2 /* SHKGooglePlusManager.swift */,
-				6E38EABD214FE81300FD06B2 /* SHKSocialUser.swift */,
+				6E12329F2150EEC600E45C23 /* SHKConstants.swift */,
+				6E1232A02150EEC600E45C23 /* SHKEnums.swift */,
+				6E1232A12150EEC600E45C23 /* SHKSegueIdentifiers.swift */,
 			);
-			path = SHKSocialManager;
+			path = SHKConstants;
 			sourceTree = "<group>";
 		};
-		6E38EA48214FC5A700FD06B2 /* SHKMessages */ = {
+		6E12329C2150EE6600E45C23 /* SHKMessages */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EABE214FE81B00FD06B2 /* SHKAppMessages.swift */,
+				6E1232A52150EEDE00E45C23 /* SHKAppMessages.swift */,
 			);
 			path = SHKMessages;
 			sourceTree = "<group>";
 		};
-		6E38EA74214FD22B00FD06B2 /* SHKUtility */ = {
+		6E12329D2150EE6600E45C23 /* SHKSocialHandler */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EABF214FE82B00FD06B2 /* SHKConstants.swift */,
-				6E38EAC0214FE82B00FD06B2 /* SHKEnums.swift */,
-				6E38EAC1214FE82B00FD06B2 /* SHKSegueIdentifiers.swift */,
-				6E38EA75214FD25500FD06B2 /* AppShared.swift */,
+				6E1232A82150EEEE00E45C23 /* SHKFBManager.swift */,
+				6E1232A72150EEEE00E45C23 /* SHKGooglePlusManager.swift */,
+				6E1232A92150EEEE00E45C23 /* SHKSocialUser.swift */,
 			);
-			name = SHKUtility;
-			path = SwiftyHelpKit/Classes/SHKUtility;
+			path = SHKSocialHandler;
+			sourceTree = "<group>";
+		};
+		6E12329E2150EE6600E45C23 /* SHKUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				6E1232AF2150EF0000E45C23 /* SHKAppShared.swift */,
+				6E1232AE2150EF0000E45C23 /* SHKDateFormatters.swift */,
+				6E1232B02150EF0000E45C23 /* SHKGenericFunctions.swift */,
+				6E1232B22150EF0000E45C23 /* SHKLocationfetchTimer.swift */,
+				6E1232AD2150EF0000E45C23 /* SHKLocationManager.swift */,
+				6E1232B12150EF0000E45C23 /* SHKUserDefaults.swift */,
+			);
+			path = SHKUtilities;
 			sourceTree = "<group>";
 		};
 		75226EA3A0FCE67E0E73D563DAFBA2B4 /* SwiftyHelpKit */ = {
 			isa = PBXGroup;
 			children = (
-				6E38EA74214FD22B00FD06B2 /* SHKUtility */,
-				6E38EA48214FC5A700FD06B2 /* SHKMessages */,
-				6E38EA46214FC59C00FD06B2 /* SHKSocialManager */,
-				6E38EA45214FC59200FD06B2 /* SHKAppConstants */,
+				6E1232992150EE6600E45C23 /* Classes */,
 				312D5400325D675E5C4AB6624E6B02BD /* Pod */,
 				E10972A7263068C720920BBF786A10C6 /* Support Files */,
 			);
@@ -438,7 +465,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E1232A32150EECA00E45C23 /* SHKEnums.swift in Sources */,
+				6E1232A42150EECA00E45C23 /* SHKSegueIdentifiers.swift in Sources */,
+				6E1232B32150EF0500E45C23 /* SHKAppShared.swift in Sources */,
+				6E1232B42150EF0500E45C23 /* SHKDateFormatters.swift in Sources */,
+				6E1232A22150EECA00E45C23 /* SHKConstants.swift in Sources */,
+				6E1232A62150EEE000E45C23 /* SHKAppMessages.swift in Sources */,
+				6E1232AA2150EEF200E45C23 /* SHKFBManager.swift in Sources */,
+				6E1232B52150EF0500E45C23 /* SHKGenericFunctions.swift in Sources */,
+				6E1232B62150EF0500E45C23 /* SHKLocationfetchTimer.swift in Sources */,
+				6E1232AB2150EEF200E45C23 /* SHKGooglePlusManager.swift in Sources */,
+				6E1232AC2150EEF200E45C23 /* SHKSocialUser.swift in Sources */,
+				6E1232B82150EF0500E45C23 /* SHKUserDefaults.swift in Sources */,
 				2303B70C191797C93E3BD98D0518876F /* SwiftyHelpKit-dummy.m in Sources */,
+				6E1232B72150EF0500E45C23 /* SHKLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

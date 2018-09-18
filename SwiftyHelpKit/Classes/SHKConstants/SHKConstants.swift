@@ -10,7 +10,7 @@ import Foundation
 import  UIKit
 
 let kAppTitle = Bundle.main.infoDictionary![kCFBundleNameKey as String] as! String
-let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//let appDelegate = UIApplication.shared.delegate as! AppDelegate
 let kAppPin = "2904"
 let kPinMaximumLength = 4
 let kPinMaximumNoOfEmails = 5

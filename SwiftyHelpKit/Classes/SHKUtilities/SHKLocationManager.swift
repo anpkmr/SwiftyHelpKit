@@ -61,7 +61,7 @@ class CSLocationManager: NSObject,CLLocationManagerDelegate {
         let locationArray = locations as NSArray
         let locationObj = locationArray.firstObject as! CLLocation
         let coord = locationObj.coordinate
-         CSUserDefaults.sharedDefault.saveUserLocationDetails(location: locationObj)
+//         CSUserDefaults.sharedDefault.saveUserLocationDetails(location: locationObj)
          stopLocationTrack()
         if CSLocationManager.onLocationCom != nil {
             CSLocationManager.onLocationCom!(coord.latitude,coord.longitude,locationObj)
