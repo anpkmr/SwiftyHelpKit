@@ -29,8 +29,8 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/anpkmr/SwiftyHelpKit.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-#s.ios.deployment_target = '8.0'
-
+    s.ios.deployment_target = '9.0'
+  s.static_framework = true
   s.source_files = 'SwiftyHelpKit/Classes/**/*'
   
   # s.resource_bundles = {
@@ -38,14 +38,11 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
+  s.frameworks = 'UIKit','GGLCore','GGLSignIn'
   s.dependency 'ObjectMapper'
-  s.dependency 'FBSDKCoreKit'
-  s.dependency 'FBSDKShareKit'
-  s.dependency 'FBSDKLoginKit'
-  s.dependency 'Google/SignIn'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  # s.dependency 'AFNetworking', '~> 2.3'
-end
+  #s.dependency 'FBSDKCoreKit', '~> 4.4'
+  #s.dependency 'FBSDKShareKit', '~> 4.4'
+  #s.dependency 'FBSDKLoginKit', '~> 4.4'
+  #s.dependency 'Google/SignIn'
+  #s.dependency 'GTMOAuth2', '~>1.1.6'
+  end
