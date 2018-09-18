@@ -9,8 +9,7 @@
 
 import Foundation
 import UIKit
-import UIKit
-import  GoogleSignIn
+import GoogleSignIn
 import ObjectMapper
 
 typealias  socialuserDetailComletion = (_ userDetail:SocialUser?,_ err:Error?)->Void
