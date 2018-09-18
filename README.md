@@ -10,6 +10,14 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+#### Dependancy
+##### SwiftyHelpKit Depends on:	
+ObjectMapper
+Alamofire
+FBSDKLoginKit	= 4.34.0
+FBSDKCoreKit	= 4.34.0
+FBSDKShareKit	= 4.34.0
+Google/SignIn	
 
 ## Installation
 
