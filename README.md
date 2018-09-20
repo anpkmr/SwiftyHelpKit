@@ -8,16 +8,22 @@
 ## How to install 
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+## Screen Shots:-
+![](SwiftyHelpKit/Example/SwiftyHelpKit/Screens/screen1.png)
+![](SwiftyHelpKit/Example/SwiftyHelpKit/Screens/screen2.png)
+![](SwiftyHelpKit/Example/SwiftyHelpKit/Screens/screen3.png)
+
 
 ## Requirements
 #### Dependancy
 ##### SwiftyHelpKit Depends on:	
-ObjectMapper
-Alamofire
-FBSDKLoginKit	= 4.34.0
-FBSDKCoreKit	= 4.34.0
-FBSDKShareKit	= 4.34.0
-Google/SignIn	
+1. ObjectMapper
+2. Alamofire
+3. FBSDKLoginKit	= 4.34.0
+4. FBSDKCoreKit	= 4.34.0
+5. FBSDKShareKit	= 4.34.0
+6. Google/SignIn
+
 
 ## Installation
 
@@ -83,6 +89,39 @@ return handled
 }
 ```
 
+## Google Plus Login Configuration:-
+
+1. Get an OAuth client ID
+
+Create a new Google API project and get an iOS client ID for the project. When prompted, specify YOUR_BUNDLE_ID(liek com.shkdemoapp.com) as the bundle ID. Add the download Google Service.plist file to your project. And make sure Target membership is checked.
+
+2. Connect Your App Delegate
+```ruby
+import GoogleSignIn
+
+func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+GIDSignIn.sharedInstance().clientID = "YOUR_CLIENT_ID"
+}
+
+
+func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+return GIDSignIn.sharedInstance().handle(url,sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,annotation: (options[UIApplicationOpenURLOptionsKey.annotation] != nil))
+}
+```
+If  you have multiple call back url's seperate them with ||
+
+3. Set the callback URL type
+Before sign in can run you need to add a callback url in your app. For adding callback url go to your project's info tab and in URL Types section add your REVERSE_CLIENT_ID(that you can found in your Google_server.plist file that you have donwloaded while congifuring your project to google developers) in URL Schemes (You can add multiple schems using *,*)
+
+4. Now use the following code to for the google login in your app
+```ruby
+SHKGooglePlusManager.sharedGoogleClient.setupGoogleLogin(self) { (socialUser, error) in
+guard error == nil else {
+print("Social user is====\(String(describing: socialUser?.firstName))")
+return
+}
+}
+```
 
 ## Author
 

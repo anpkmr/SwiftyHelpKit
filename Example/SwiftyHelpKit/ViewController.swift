@@ -10,6 +10,7 @@ import UIKit
 import SwiftyHelpKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var imageView:UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,41 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    @IBAction func buttonGooglePlusTapped(_ sender: Any) {
+        SHKGooglePlusManager.sharedGoogleClient.setupGoogleLogin(self) { (socialUser, error) in
+            guard error == nil else {
+                print("SOcial user is====\(String(describing: socialUser?.firstName))")
+                return
+            }
+        }
+    }
+    @IBAction func showConfirmationAlert(_ sender: Any) {
+        showConfirmationAlert(alertText: "This is a confrimation alert",okayMessage:"Delete?", okayActionStyle: .destructive) { (buttonAction) in
+            switch buttonAction! {
+            case .Ok:
+                print("do some action button tapped")
+                break
+            case .Cancel:
+                print("Cancel tapped")
+                break
+            }
+        }
+    }
+    
+    @IBAction func showSimpleAlert(_ sender: Any) {
+        showSimpleAlert(message: "Simple alert")
+    }
+    @IBAction func showImageAction(_ sender:Any){
+        
+        showActionSheetForImagePick { (image) in
+            if image != nil {
+                self.imageView.image = image
+            }
+        }
+    }
+    
+    
     
     /// Facebook Login
     

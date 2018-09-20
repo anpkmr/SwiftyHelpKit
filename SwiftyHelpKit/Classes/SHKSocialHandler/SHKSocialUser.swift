@@ -9,11 +9,12 @@
 import Foundation
 import ObjectMapper
 
+/// Social user model class with basic information
 public class SocialUser: Mappable {
     
-    var firstName:String = ""
-    var lastName:String = ""
-    var gender:String = ""
+    public var firstName:String = ""
+    public var lastName:String = ""
+    public var gender:String = ""
 
     required public init?(map: Map) {
     }

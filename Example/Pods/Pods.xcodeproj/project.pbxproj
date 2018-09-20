@@ -25,6 +25,9 @@
 		6E1232B72150EF0500E45C23 /* SHKLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232AD2150EF0000E45C23 /* SHKLocationManager.swift */; };
 		6E1232B82150EF0500E45C23 /* SHKUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232B12150EF0000E45C23 /* SHKUserDefaults.swift */; };
 		6E1232BC21510B5500E45C23 /* ShkRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1232BA21510B0100E45C23 /* ShkRequestHandler.swift */; };
+		6EE34E102153580B00A2E364 /* ShkCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE34E0F2153580B00A2E364 /* ShkCustomTextField.swift */; };
+		6EE34E122153582B00A2E364 /* ShkCustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE34E112153582B00A2E364 /* ShkCustomImageView.swift */; };
+		6EE6EE7621527A2D002B5076 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE6EE7521527A2A002B5076 /* ViewControllerExtension.swift */; };
 		9DB6928ADF1DA9CFBC951998B80926C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */; };
 		B575D21378CD7F6B2D2D86FA6C838C1B /* Pods-SwiftyHelpKit_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53DD83E53EC76F8B86CD005FF5C9D9A9 /* Pods-SwiftyHelpKit_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C780CB83FCEFB330F150A0324C6EB75D /* SwiftyHelpKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 51E6349EEC0CF50C7E2FA2069B370AB6 /* SwiftyHelpKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -82,6 +85,9 @@
 		6E1232B12150EF0000E45C23 /* SHKUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKUserDefaults.swift; sourceTree = "<group>"; };
 		6E1232B22150EF0000E45C23 /* SHKLocationfetchTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHKLocationfetchTimer.swift; sourceTree = "<group>"; };
 		6E1232BA21510B0100E45C23 /* ShkRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShkRequestHandler.swift; sourceTree = "<group>"; };
+		6EE34E0F2153580B00A2E364 /* ShkCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShkCustomTextField.swift; sourceTree = "<group>"; };
+		6EE34E112153582B00A2E364 /* ShkCustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShkCustomImageView.swift; sourceTree = "<group>"; };
+		6EE6EE7521527A2A002B5076 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		7FDD58B481298F068AD2842F51DD083B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83375D0BCB438E9ACF513EC0DB618FAE /* Pods-SwiftyHelpKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SwiftyHelpKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		85A53D485A70152B7175F966E55169BB /* Pods-SwiftyHelpKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SwiftyHelpKit_Tests.modulemap"; sourceTree = "<group>"; };
@@ -158,6 +164,8 @@
 		6E1232992150EE6600E45C23 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				6EE34E0E215357E300A2E364 /* CustomClasses */,
+				6EE6EE74215279DA002B5076 /* Extensions */,
 				6E1232B921510ACE00E45C23 /* RequestHandler */,
 				6E12329A2150EE6600E45C23 /* .gitkeep */,
 				6E12329B2150EE6600E45C23 /* SHKConstants */,
@@ -215,6 +223,23 @@
 				6E1232BA21510B0100E45C23 /* ShkRequestHandler.swift */,
 			);
 			path = RequestHandler;
+			sourceTree = "<group>";
+		};
+		6EE34E0E215357E300A2E364 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6EE34E0F2153580B00A2E364 /* ShkCustomTextField.swift */,
+				6EE34E112153582B00A2E364 /* ShkCustomImageView.swift */,
+			);
+			path = CustomClasses;
+			sourceTree = "<group>";
+		};
+		6EE6EE74215279DA002B5076 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6EE6EE7521527A2A002B5076 /* ViewControllerExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		75226EA3A0FCE67E0E73D563DAFBA2B4 /* SwiftyHelpKit */ = {
@@ -477,15 +502,18 @@
 				6E1232B32150EF0500E45C23 /* SHKAppShared.swift in Sources */,
 				6E1232B42150EF0500E45C23 /* SHKDateFormatters.swift in Sources */,
 				6E1232BC21510B5500E45C23 /* ShkRequestHandler.swift in Sources */,
+				6EE34E102153580B00A2E364 /* ShkCustomTextField.swift in Sources */,
 				6E1232A22150EECA00E45C23 /* SHKConstants.swift in Sources */,
 				6E1232A62150EEE000E45C23 /* SHKAppMessages.swift in Sources */,
 				6E1232AA2150EEF200E45C23 /* SHKFBManager.swift in Sources */,
 				6E1232B52150EF0500E45C23 /* SHKGenericFunctions.swift in Sources */,
+				6EE6EE7621527A2D002B5076 /* ViewControllerExtension.swift in Sources */,
 				6E1232B62150EF0500E45C23 /* SHKLocationfetchTimer.swift in Sources */,
 				6E1232AB2150EEF200E45C23 /* SHKGooglePlusManager.swift in Sources */,
 				6E1232AC2150EEF200E45C23 /* SHKSocialUser.swift in Sources */,
 				6E1232B82150EF0500E45C23 /* SHKUserDefaults.swift in Sources */,
 				2303B70C191797C93E3BD98D0518876F /* SwiftyHelpKit-dummy.m in Sources */,
+				6EE34E122153582B00A2E364 /* ShkCustomImageView.swift in Sources */,
 				6E1232B72150EF0500E45C23 /* SHKLocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
