@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHelpKit'
-  s.version          = '0.1.6'
+  s.version          = '0.1.7'
   s.summary          = 'SwiftyHelpKit will allow you to add some startup code in your app that you initally need'
   s.swift_version = '4.0'
 
@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.pod_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
   s.frameworks = 'UIKit','StoreKit'
-  s.dependency 'ObjectMapper'
+  s.dependency 'ObjectMapper', '3.4'
   s.dependency 'Alamofire'
   s.dependency 'FBSDKLoginKit', '4.34.0'
   s.dependency 'FBSDKCoreKit', '4.34.0'
