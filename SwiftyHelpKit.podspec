@@ -40,7 +40,7 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   s.pod_target_xcconfig = { 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES' }
   s.frameworks = 'UIKit','StoreKit'
-  s.dependency 'ObjectMapper', '3.4'
+  s.dependency 'ObjectMapper', '3.4.2'
   s.dependency 'Alamofire'
   s.dependency 'FBSDKLoginKit', '4.34.0'
   s.dependency 'FBSDKCoreKit', '4.34.0'

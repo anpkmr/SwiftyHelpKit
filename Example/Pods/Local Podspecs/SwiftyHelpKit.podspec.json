@@ -1,8 +1,8 @@
 {
   "name": "SwiftyHelpKit",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "summary": "SwiftyHelpKit will allow you to add some startup code in your app that you initally need",
-  "swift_version": "4.0",
+  "swift_version": "4.2",
   "description": "SwiftyHelpKit will allow you to add some startup code in your app that you initally need, Install framework and you don't have to write same code again and again.",
   "homepage": "https://github.com/anpkmr/SwiftyHelpKit",
   "license": {
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/anpkmr/SwiftyHelpKit.git",
-    "tag": "0.1.6"
+    "tag": "0.1.7"
   },
   "requires_arc": true,
   "platforms": {
@@ -31,7 +31,7 @@
   ],
   "dependencies": {
     "ObjectMapper": [
-      "3.4"
+      "3.4.2"
     ],
     "Alamofire": [
 

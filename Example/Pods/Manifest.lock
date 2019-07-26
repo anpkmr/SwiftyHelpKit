@@ -40,12 +40,14 @@ PODS:
     - "GoogleToolboxForMac/NSString+URLArguments (= 2.2.0)"
   - "GoogleToolboxForMac/NSString+URLArguments (2.2.0)"
   - GTMSessionFetcher/Core (1.2.1)
-  - SwiftyHelpKit (0.1.6):
+  - ObjectMapper (3.4.2)
+  - SwiftyHelpKit (0.1.7):
     - Alamofire
     - FBSDKCoreKit (= 4.34.0)
     - FBSDKLoginKit (= 4.34.0)
     - FBSDKShareKit (= 4.34.0)
     - Google/SignIn
+    - ObjectMapper (= 3.4.2)
 
 DEPENDENCIES:
   - SwiftyHelpKit (from `../`)
@@ -64,6 +66,7 @@ SPEC REPOS:
     - GoogleSignIn
     - GoogleToolboxForMac
     - GTMSessionFetcher
+    - ObjectMapper
 
 EXTERNAL SOURCES:
   SwiftyHelpKit:
@@ -82,7 +85,8 @@ SPEC CHECKSUMS:
   GoogleSignIn: 7ff245e1a7b26d379099d3243a562f5747e23d39
   GoogleToolboxForMac: ff31605b7d66400dcec09bed5861689aebadda4d
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
-  SwiftyHelpKit: b15f76939a9fbf835d2e94e75b16225e9ad4eda8
+  ObjectMapper: 0d4402610f4e468903ae64629eec4784531e5c51
+  SwiftyHelpKit: 11e97331245954ea5349f5b8be0e22fb1abc1c10
 
 PODFILE CHECKSUM: 39e76918baedfaad2a697db59e57b4a5457fc762
 
