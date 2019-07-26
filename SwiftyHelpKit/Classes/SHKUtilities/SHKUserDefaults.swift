@@ -56,5 +56,23 @@ class SHKUserDefaults : NSObject{
     func getloggedInFirstTime() -> Bool?{
         return defaults.value(forKey:"firstTimeLogged") as? Bool
     }
+    
+    func saveLoginToken(token:String){
+        defaults.set(token, forKey:"savedToken")
+        defaults.synchronize()
+    }
+    
+    func getSavedToken()->String?{
+        return defaults.value(forKey:"savedToken") as? String
+    }
+    
+    func saveValue(_ value:String,key:String){
+        defaults.set(value, forKey:key)
+        defaults.synchronize()
+    }
+    
+    func getValue(key:String)->String?{
+        return defaults.value(forKey:key) as? String
+    }
 }
 

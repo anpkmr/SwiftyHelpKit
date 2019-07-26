@@ -30,7 +30,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func fetchTopMovies(_ sender:UIButton) {
-        ShkRequestHandler.sharedService.getRequest(requestUrl: URL(string:"https://itunes.apple.com/us/rss/topmovies/limit=25/json")!, requestParam: nil) { (response, error) in
+        
+        ShkRequestHandler.sharedService.createApiRequest(.post, requestUrl: URL(string:"https://itunes.apple.com/us/rss/topmovies/limit=25/json")!, requestParam: nil) { (response, error) in
             if error == nil {
                 print("Response in my controller class is ===\(String(describing: response))")
             } else {

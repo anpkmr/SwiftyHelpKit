@@ -132,16 +132,7 @@ static FBSDKGameRequestFrictionlessRecipientCache *_recipientCache = nil;
 
 - (BOOL)validateWithError:(NSError *__autoreleasing *)errorRef
 {
-  if (![FBSDKShareUtility validateRequiredValue:self.content name:@"content" error:errorRef]) {
-    return NO;
-  }
-  if ([self.content respondsToSelector:@selector(validateWithOptions:error:)]) {
-    return [self.content validateWithOptions:FBSDKShareBridgeOptionsDefault error:errorRef];
-  }
-  if (errorRef != NULL) {
-    *errorRef = [FBSDKShareError invalidArgumentErrorWithName:@"content" value:self.content message:nil];
-  }
-  return NO;
+  return [FBSDKShareUtility validateGameRequestContent:self.content error:errorRef];
 }
 
 #pragma mark - FBSDKWebDialogDelegate

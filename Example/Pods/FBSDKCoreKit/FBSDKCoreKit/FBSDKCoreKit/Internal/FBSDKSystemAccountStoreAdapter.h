@@ -32,11 +32,11 @@ typedef void (^FBSDKGraphRequestAccessToAccountsHandler)(NSString *oauthToken, N
 
 /*
   Requests access to the device's Facebook account for the given parameters.
- @param permissions the permissions
- @param defaultAudience the default audience
- @param isReauthorize a flag describing if this is a reauth request
- @param appID the app id
- @param handler the handler that will be invoked on completion (dispatched to the main thread). the oauthToken is nil on failure.
+ - Parameter permissions: the permissions
+ - Parameter defaultAudience: the default audience
+ - Parameter isReauthorize: a flag describing if this is a reauth request
+ - Parameter appID: the app id
+ - Parameter handler: the handler that will be invoked on completion (dispatched to the main thread). the oauthToken is nil on failure.
  */
 - (void)requestAccessToFacebookAccountStore:(NSSet *)permissions
                             defaultAudience:(NSString *)defaultAudience
@@ -47,7 +47,7 @@ typedef void (^FBSDKGraphRequestAccessToAccountsHandler)(NSString *oauthToken, N
 /*
   Sends a message to the device account store to renew the Facebook account credentials
 
- @param handler the handler that is invoked on completion
+ - Parameter handler: the handler that is invoked on completion
  */
 - (void)renewSystemAuthorization:(void(^)(ACAccountCredentialRenewResult result, NSError *error))handler;
 

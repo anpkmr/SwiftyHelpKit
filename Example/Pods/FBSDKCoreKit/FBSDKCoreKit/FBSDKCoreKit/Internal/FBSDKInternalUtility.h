@@ -43,11 +43,11 @@ typedef NS_ENUM(int32_t, FBSDKUIKitVersion)
 
 /**
   Constructs an URL for the current app.
- @param host The host for the URL.
- @param path The path for the URL.
- @param queryParameters The query parameters for the URL.  This will be converted into a query string.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return The app URL.
+ - Parameter host: The host for the URL.
+ - Parameter path: The path for the URL.
+ - Parameter queryParameters: The query parameters for the URL.  This will be converted into a query string.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: The app URL.
  */
 + (NSURL *)appURLWithHost:(NSString *)host
                      path:(NSString *)path
@@ -56,15 +56,15 @@ typedef NS_ENUM(int32_t, FBSDKUIKitVersion)
 
 /**
   Parses an FB url's query params (and potentially fragment) into a dictionary.
- @param url The FB url.
- @return A dictionary with the key/value pairs.
+ - Parameter url: The FB url.
+ - Returns: A dictionary with the key/value pairs.
  */
 + (NSDictionary *)dictionaryFromFBURL:(NSURL *)url;
 
 /**
   Adds an object to an array if it is not nil.
- @param array The array to add the object to.
- @param object The object to add to the array.
+ - Parameter array: The array to add the object to.
+ - Parameter object: The object to add to the array.
  */
 + (void)array:(NSMutableArray *)array addObject:(id)object;
 
@@ -78,8 +78,8 @@ typedef NS_ENUM(int32_t, FBSDKUIKitVersion)
 
 /**
   Converts simple value types to the string equivalent for serializing to a request query or body.
- @param value The value to be converted.
- @return The value that may have been converted if able (otherwise the input param).
+ - Parameter value: The value to be converted.
+ - Returns: The value that may have been converted if able (otherwise the input param).
  */
 + (id)convertRequestValue:(id)value;
 
@@ -87,17 +87,17 @@ typedef NS_ENUM(int32_t, FBSDKUIKitVersion)
   Gets the milliseconds since the Unix Epoch.
 
  Changes in the system clock will affect this value.
- @return The number of milliseconds since the Unix Epoch.
+ - Returns: The number of milliseconds since the Unix Epoch.
  */
 + (uint64_t)currentTimeInMilliseconds;
 
 /**
   Sets an object for a key in a dictionary if it is not nil.
- @param dictionary The dictionary to set the value for.
- @param object The value to set after serializing to JSON.
- @param key The key to set the value for.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return NO if an error occurred while serializing the object, otherwise YES.
+ - Parameter dictionary: The dictionary to set the value for.
+ - Parameter object: The value to set after serializing to JSON.
+ - Parameter key: The key to set the value for.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: NO if an error occurred while serializing the object, otherwise YES.
  */
 + (BOOL)dictionary:(NSMutableDictionary *)dictionary
 setJSONStringForObject:(id)object
@@ -106,19 +106,19 @@ setJSONStringForObject:(id)object
 
 /**
   Sets an object for a key in a dictionary if it is not nil.
- @param dictionary The dictionary to set the value for.
- @param object The value to set.
- @param key The key to set the value for.
+ - Parameter dictionary: The dictionary to set the value for.
+ - Parameter object: The value to set.
+ - Parameter key: The key to set the value for.
  */
 + (void)dictionary:(NSMutableDictionary *)dictionary setObject:(id)object forKey:(id<NSCopying>)key;
 
 /**
   Constructs a Facebook URL.
- @param hostPrefix The prefix for the host, such as 'm', 'graph', etc.
- @param path The path for the URL.  This may or may not include a version.
- @param queryParameters The query parameters for the URL.  This will be converted into a query string.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return The Facebook URL.
+ - Parameter hostPrefix: The prefix for the host, such as 'm', 'graph', etc.
+ - Parameter path: The path for the URL.  This may or may not include a version.
+ - Parameter queryParameters: The query parameters for the URL.  This will be converted into a query string.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: The Facebook URL.
  */
 + (NSURL *)facebookURLWithHostPrefix:(NSString *)hostPrefix
                                 path:(NSString *)path
@@ -127,12 +127,12 @@ setJSONStringForObject:(id)object
 
 /**
   Constructs a Facebook URL.
- @param hostPrefix The prefix for the host, such as 'm', 'graph', etc.
- @param path The path for the URL.  This may or may not include a version.
- @param queryParameters The query parameters for the URL.  This will be converted into a query string.
- @param defaultVersion A version to add to the URL if none is found in the path.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return The Facebook URL.
+ - Parameter hostPrefix: The prefix for the host, such as 'm', 'graph', etc.
+ - Parameter path: The path for the URL.  This may or may not include a version.
+ - Parameter queryParameters: The query parameters for the URL.  This will be converted into a query string.
+ - Parameter defaultVersion: A version to add to the URL if none is found in the path.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: The Facebook URL.
  */
 + (NSURL *)facebookURLWithHostPrefix:(NSString *)hostPrefix
                                 path:(NSString *)path
@@ -142,52 +142,52 @@ setJSONStringForObject:(id)object
 
 /**
   Tests whether the supplied URL is a valid URL for opening in the browser.
- @param URL The URL to test.
- @return YES if the URL refers to an http or https resource, otherwise NO.
+ - Parameter URL: The URL to test.
+ - Returns: YES if the URL refers to an http or https resource, otherwise NO.
  */
 + (BOOL)isBrowserURL:(NSURL *)URL;
 
 /**
   Tests whether the supplied bundle identifier references a Facebook app.
- @param bundleIdentifier The bundle identifier to test.
- @return YES if the bundle identifier refers to a Facebook app, otherwise NO.
+ - Parameter bundleIdentifier: The bundle identifier to test.
+ - Returns: YES if the bundle identifier refers to a Facebook app, otherwise NO.
  */
 + (BOOL)isFacebookBundleIdentifier:(NSString *)bundleIdentifier;
 
 /**
   Tests whether the operating system is at least the specified version.
- @param version The version to test against.
- @return YES if the operating system is greater than or equal to the specified version, otherwise NO.
+ - Parameter version: The version to test against.
+ - Returns: YES if the operating system is greater than or equal to the specified version, otherwise NO.
  */
 + (BOOL)isOSRunTimeVersionAtLeast:(NSOperatingSystemVersion)version;
 
 /**
   Tests whether the supplied bundle identifier references the Safari app.
- @param bundleIdentifier The bundle identifier to test.
- @return YES if the bundle identifier refers to the Safari app, otherwise NO.
+ - Parameter bundleIdentifier: The bundle identifier to test.
+ - Returns: YES if the bundle identifier refers to the Safari app, otherwise NO.
  */
 + (BOOL)isSafariBundleIdentifier:(NSString *)bundleIdentifier;
 
 /**
   Tests whether the UIKit version that the current app was linked to is at least the specified version.
- @param version The version to test against.
- @return YES if the linked UIKit version is greater than or equal to the specified version, otherwise NO.
+ - Parameter version: The version to test against.
+ - Returns: YES if the linked UIKit version is greater than or equal to the specified version, otherwise NO.
  */
 + (BOOL)isUIKitLinkTimeVersionAtLeast:(FBSDKUIKitVersion)version;
 
 /**
   Tests whether the UIKit version in the runtime is at least the specified version.
- @param version The version to test against.
- @return YES if the runtime UIKit version is greater than or equal to the specified version, otherwise NO.
+ - Parameter version: The version to test against.
+ - Returns: YES if the runtime UIKit version is greater than or equal to the specified version, otherwise NO.
  */
 + (BOOL)isUIKitRunTimeVersionAtLeast:(FBSDKUIKitVersion)version;
 
 /**
   Converts an object into a JSON string.
- @param object The object to convert to JSON.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @param invalidObjectHandler Handles objects that are invalid, returning a replacement value or nil to ignore.
- @return A JSON string or nil if the object cannot be converted to JSON.
+ - Parameter object: The object to convert to JSON.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Parameter invalidObjectHandler: Handles objects that are invalid, returning a replacement value or nil to ignore.
+ - Returns: A JSON string or nil if the object cannot be converted to JSON.
  */
 + (NSString *)JSONStringForObject:(id)object
                             error:(NSError *__autoreleasing *)errorRef
@@ -197,17 +197,17 @@ setJSONStringForObject:(id)object
   Checks equality between 2 objects.
 
  Checks for pointer equality, nils, isEqual:.
- @param object The first object to compare.
- @param other The second object to compare.
- @return YES if the objects are equal, otherwise NO.
+ - Parameter object: The first object to compare.
+ - Parameter other: The second object to compare.
+ - Returns: YES if the objects are equal, otherwise NO.
  */
 + (BOOL)object:(id)object isEqualToObject:(id)other;
 
 /**
   Converts a JSON string into an object
- @param string The JSON string to convert.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return An NSDictionary, NSArray, NSString or NSNumber containing the object representation, or nil if the string
+ - Parameter string: The JSON string to convert.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: An NSDictionary, NSArray, NSString or NSNumber containing the object representation, or nil if the string
  cannot be converted.
  */
 + (id)objectForJSONString:(NSString *)string error:(NSError *__autoreleasing *)errorRef;
@@ -219,10 +219,10 @@ setJSONStringForObject:(id)object
 
 /**
   Constructs a query string from a dictionary.
- @param dictionary The dictionary with key/value pairs for the query string.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @param invalidObjectHandler Handles objects that are invalid, returning a replacement value or nil to ignore.
- @return Query string representation of the parameters.
+ - Parameter dictionary: The dictionary with key/value pairs for the query string.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Parameter invalidObjectHandler: Handles objects that are invalid, returning a replacement value or nil to ignore.
+ - Returns: Query string representation of the parameters.
  */
 + (NSString *)queryStringWithDictionary:(NSDictionary *)dictionary
                                   error:(NSError *__autoreleasing *)errorRef
@@ -237,18 +237,18 @@ setJSONStringForObject:(id)object
  then we need to use the legacy layout code.  Otherwise if the application was linked with UIKit on iOS 8 or later and
  the application is running on iOS 8 or later, UIKit handles all of the rotation complexity and the origin is always in
  the top-left and no rotation transform is necessary.
- @return YES if if the orientation must be manually adjusted, otherwise NO.
+ - Returns: YES if if the orientation must be manually adjusted, otherwise NO.
  */
 + (BOOL)shouldManuallyAdjustOrientation;
 
 /**
   Constructs an NSURL.
- @param scheme The scheme for the URL.
- @param host The host for the URL.
- @param path The path for the URL.
- @param queryParameters The query parameters for the URL.  This will be converted into a query string.
- @param errorRef If an error occurs, upon return contains an NSError object that describes the problem.
- @return The URL.
+ - Parameter scheme: The scheme for the URL.
+ - Parameter host: The host for the URL.
+ - Parameter path: The path for the URL.
+ - Parameter queryParameters: The query parameters for the URL.  This will be converted into a query string.
+ - Parameter errorRef: If an error occurs, upon return contains an NSError object that describes the problem.
+ - Returns: The URL.
  */
 + (NSURL *)URLWithScheme:(NSString *)scheme
                     host:(NSString *)host
@@ -263,9 +263,9 @@ setJSONStringForObject:(id)object
 
 /**
   Extracts permissions from a response fetched from me/permissions
- @param responseObject the response
- @param grantedPermissions the set to add granted permissions to
- @param declinedPermissions the set to add declined permissions to.
+ - Parameter responseObject: the response
+ - Parameter grantedPermissions: the set to add granted permissions to
+ - Parameter declinedPermissions: the set to add declined permissions to.
  */
 + (void)extractPermissionsFromResponse:(NSDictionary *)responseObject
                     grantedPermissions:(NSMutableSet *)grantedPermissions
@@ -273,13 +273,13 @@ setJSONStringForObject:(id)object
 
 /**
   Registers a transient object so that it will not be deallocated until unregistered
- @param object The transient object
+ - Parameter object: The transient object
  */
 + (void)registerTransientObject:(id)object;
 
 /**
   Unregisters a transient object that was previously registered with registerTransientObject:
- @param object The transient object
+ - Parameter object: The transient object
  */
 + (void)unregisterTransientObject:(__weak id)object;
 

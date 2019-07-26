@@ -56,7 +56,6 @@ implicitPurchaseLoggingEnabled:(BOOL)implicitPurchaseLoggingEnabled
         codelessEventsEnabled:(BOOL)codelessEventsEnabled
   systemAuthenticationEnabled:(BOOL)systemAuthenticationEnabled
         nativeAuthFlowEnabled:(BOOL)nativeAuthFlowEnabled
-     uninstallTrackingEnabled:(BOOL)uninstallTrackingEnabled
          dialogConfigurations:(NSDictionary *)dialogConfigurations
                   dialogFlows:(NSDictionary *)dialogFlows
                     timestamp:(NSDate *)timestamp
@@ -83,7 +82,6 @@ NS_DESIGNATED_INITIALIZER;
 @property (nonatomic, assign, readonly, getter=isLoginTooltipEnabled) BOOL loginTooltipEnabled;
 @property (nonatomic, assign, readonly, getter=isNativeAuthFlowEnabled) BOOL nativeAuthFlowEnabled;
 @property (nonatomic, assign, readonly, getter=isSystemAuthenticationEnabled) BOOL systemAuthenticationEnabled;
-@property (nonatomic, assign, readonly, getter=isUninstallTrackingEnabled) BOOL uninstallTrackingEnabled;
 @property (nonatomic, copy, readonly) NSString *loginTooltipText;
 @property (nonatomic, copy, readonly) NSDate *timestamp;
 @property (nonatomic, assign) NSTimeInterval sessionTimoutInterval;
