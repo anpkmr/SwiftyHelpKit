@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHelpKit'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'SwiftyHelpKit will allow you to add some startup code in your app that you initally need'
   s.swift_version    = '4.0'
 
