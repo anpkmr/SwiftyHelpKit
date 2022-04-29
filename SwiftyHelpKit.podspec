@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SwiftyHelpKit'
-  s.version          = '0.1.9'
+  s.version          = '1.0.0'
   s.summary          = 'SwiftyHelpKit will allow you to add some startup code in your app that you initally need'
   s.swift_version    = '4.0'
 
@@ -27,7 +27,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'anpkmr' => 'anup227kumar@gmail.com' }
   s.source           = { :git => 'https://github.com/anpkmr/SwiftyHelpKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://www.youtube.com/channel/UCx6yQ8VXPoaYHnquptbWPbg'
   s.requires_arc = true
   s.ios.deployment_target = '9.0'
   s.static_framework = true

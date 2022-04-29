@@ -1,8 +1,8 @@
 {
   "name": "SwiftyHelpKit",
-  "version": "0.1.7",
+  "version": "0.1.9",
   "summary": "SwiftyHelpKit will allow you to add some startup code in your app that you initally need",
-  "swift_version": "4.2",
+  "swift_versions": "4.0",
   "description": "SwiftyHelpKit will allow you to add some startup code in your app that you initally need, Install framework and you don't have to write same code again and again.",
   "homepage": "https://github.com/anpkmr/SwiftyHelpKit",
   "license": {
@@ -14,7 +14,7 @@
   },
   "source": {
     "git": "https://github.com/anpkmr/SwiftyHelpKit.git",
-    "tag": "0.1.7"
+    "tag": "0.1.9"
   },
   "requires_arc": true,
   "platforms": {
@@ -48,5 +48,6 @@
     "Google/SignIn": [
 
     ]
-  }
+  },
+  "swift_version": "4.0"
 }

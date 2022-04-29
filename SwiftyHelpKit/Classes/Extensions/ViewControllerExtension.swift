@@ -45,8 +45,8 @@ extension UIViewController :UIImagePickerControllerDelegate,UINavigationControll
     ///   - dismissTitle: dismiss button title
     ///   - completion: completion
     public func showAlert(mytext: String,dismissTitle:String = kDismiss, completion: (() -> Swift.Void)? = nil) {
-        let alert = UIAlertController(title: kAppTitle, message: mytext, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: dismissTitle, style: UIAlertActionStyle.default, handler: { (action) in
+        let alert = UIAlertController(title: kAppTitle, message: mytext, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: dismissTitle, style: .default, handler: { (action) in
             if completion != nil{
                 completion!()
             }
@@ -60,16 +60,16 @@ extension UIViewController :UIImagePickerControllerDelegate,UINavigationControll
     ///
     /// - Parameter message: message to show on alert controller
     public func showSimpleAlert(message: String!) {
-        let alertController = UIAlertController(title: kAppTitle, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alertController.addAction(UIAlertAction(title: kDismiss, style: UIAlertActionStyle.default, handler: nil))
+        let alertController = UIAlertController(title: kAppTitle, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: kDismiss, style: .default, handler: nil))
         self.present(alertController, animated: true, completion: nil)
     }
     
     
-    public func showConfirmationAlert(alertText: String, okayMessage:String = kLogoutConfirm,okayActionStyle:UIAlertActionStyle , completion: @escaping (_ alertAction : Action?) ->()) {
-        let alert = UIAlertController(title: kAppTitle, message: alertText, preferredStyle: UIAlertControllerStyle.alert)
+    public func showConfirmationAlert(alertText: String, okayMessage:String = kLogoutConfirm,okayActionStyle: UIAlertAction.Style , completion: @escaping (_ alertAction : Action?) ->()) {
+        let alert = UIAlertController(title: kAppTitle, message: alertText, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: kCancel, style: UIAlertActionStyle.default, handler: { (action) in
+        alert.addAction(UIAlertAction(title: kCancel, style: .default, handler: { (action) in
             completion(.Cancel)
             
         }))
@@ -105,7 +105,7 @@ extension UIViewController :UIImagePickerControllerDelegate,UINavigationControll
         present(alertController, animated: true, completion: nil)
     }
     
-    public func getImage(sourceType: UIImagePickerControllerSourceType,captureMode:UIImagePickerControllerCameraCaptureMode = .photo,completion: @escaping imageCompletion) {
+    public func getImage(sourceType: UIImagePickerController.SourceType,captureMode: UIImagePickerController.CameraCaptureMode = .photo, completion: @escaping imageCompletion) {
         myImageCom = completion
         imagePicker.allowsEditing = true
         if UIImagePickerController.isSourceTypeAvailable(sourceType) == true {
@@ -123,7 +123,7 @@ extension UIViewController :UIImagePickerControllerDelegate,UINavigationControll
     }
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let pickedImage = info[UIImagePickerControllerEditedImage] as? UIImage {
+        if let pickedImage = info[UIImagePickerController.InfoKey.editedImage.rawValue] as? UIImage {
             myImageCom!(pickedImage)
         }
         dismiss(animated: true, completion: nil)
